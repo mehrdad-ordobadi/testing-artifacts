@@ -1,8 +1,8 @@
 name: second pipeline
 
 on:
-  workflow_dispatch:
-#   push:
+#   workflow_dispatch:
+  push:
 jobs:
     download:
         runs-on: ubuntu-latest
