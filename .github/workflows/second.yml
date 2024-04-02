@@ -1,0 +1,16 @@
+name: second pipeline
+
+on:
+  workflow_dispatch:
+#   push:
+jobs:
+    download:
+        runs-on: ubuntu-latest
+        steps:
+            - name: download
+              uses: actions/download-artifact@v2
+              with:
+                name: artifact
+                path: /tmp/artifact.txt
+            - name: print
+              run: cat /tmp/artifact.txt

@@ -1,0 +1,20 @@
+name: first pipeline
+
+on:
+  push:
+jobs:
+    upload:
+        runs-on: ubuntu-latest
+        steps:
+            - name: create artifact
+              run: |
+                touch artifact.txt
+                echo "abc testing testing now!" >> artifact.txt
+            
+            - name: upload artifact
+              uses: actions/upload-artifact@v2
+              with:
+                name: artifact
+                path: /tmp/artifact.txt
+                retention-days: 1
+                
