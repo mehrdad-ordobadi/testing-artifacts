@@ -8,8 +8,8 @@ jobs:
         steps:
             - name: create artifact
               run: |
-                touch artifact.txt
-                echo "abc testing testing now!" >> artifact.txt
+                touch /tmp/artifact.txt
+                echo "abc testing testing now!" >> /tmp/artifact.txt
             
             - name: upload artifact
               uses: actions/upload-artifact@v2
