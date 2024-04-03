@@ -15,7 +15,8 @@ jobs:
                 https://api.github.com/repos/mehrdad-ordobadi/testing-artifacts/actions/artifacts/artifact
             - name: print
               run: | 
-                ls
+                pwd
+                ls -al
                 # unzip artifact
                 # cat artifact.txt
                 
