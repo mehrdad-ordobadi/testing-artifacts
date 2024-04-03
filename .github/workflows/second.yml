@@ -8,8 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: download
-              uses: actions/download-artifact@v2
+              uses: dawidd6/action-download-artifact@v3
               with:
+                workflow: first.yml
                 name: artifact
                 path: /tmp/
             - name: print
